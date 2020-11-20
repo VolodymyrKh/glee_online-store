@@ -1,0 +1,43 @@
+$default: #262626;
+$menu-color: #436372;
+$accent: #fcd7b6;
+$btn-color:#a3bbc8;
+$btn-lightcolor: #edf1f4;
+
+%rubik-400 {
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%rubik-500 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%dmsans-400 {
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%dmsans-500 {
+    font-family: 'DMSans-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%dmsans-700 {
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%user-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+%center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}

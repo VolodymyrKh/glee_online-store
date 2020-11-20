@@ -1,0 +1,13 @@
+body {
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $default;
+   }
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+

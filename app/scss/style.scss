@@ -1,0 +1,167 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+.header {
+    padding: 45px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %rubik-500;
+        font-weight: 600;
+    }
+}
+
+.logo {
+    font-size: 36px;
+    color: $menu-color;
+    padding-left: 65px;
+    background-image: url(../images/header-icons/logo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.07);
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item+.menu__item {
+        margin-left: 35px;
+    }
+
+    &__link {
+        color: $menu-color;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+            color: $btn-color;
+            border-bottom: 1px solid $btn-color;
+            outline: transparent;
+        }
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    &__link {
+        @extend %dmsans-500;
+        font-size: 10px;
+        color: $menu-color;
+        position: relative;
+        transition: background-color 0.3s;
+
+        &::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $btn-lightcolor;
+            outline: transparent;
+        }
+    }
+
+
+    &__link--search {
+        @extend %user-btn;
+        background-color: $btn-lightcolor;
+        margin-right: 20px;
+        &:hover,
+        &:focus {
+            background-color: $btn-color;
+        }
+    }
+
+    &__link--heart {
+        width: 90px;
+        border-radius: 45px 0 0 45px;
+        background-color: $accent;
+    }
+
+    &__link--cart {
+        width: 90px;
+        border-radius: 0 45px 45px 0;
+        background-color: $accent;
+        margin-right: 20px;
+    }
+
+    &__link--dots {
+        @extend %user-btn;
+        background-color: $btn-color;
+    }
+
+    &__link--search::before {
+        background-image: url(../images/header-icons/search.png);
+        @extend %center;
+    }
+
+    &__link--heart::before {
+        background-image: url(../images/header-icons/heart.png);
+        bottom: 13px;
+        left: 40px;
+    }
+
+    &__link--cart::before {
+        background-image: url(../images/header-icons/cart.png);
+        right: 40px;
+        bottom: 13px;
+    }
+
+    &__link--cart::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 32px;
+        background-color: #fff;
+        top: 10px;
+    }
+
+    &__link--dots::before {
+        background-image: url(../images/header-icons/dots.png);
+        @extend %center;
+    }
+
+    &__data {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        line-height: 16px;
+    }
+
+    &__data--heart {
+        top: 13px;
+        left: 52px;
+    }
+
+    &__data--cart {
+        top: 13px;
+        right: 34px;
+    }
+}
+
+
+
+@import 'media';
