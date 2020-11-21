@@ -41,11 +41,11 @@
 
 @font-face {
     font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     src: local('Rubik-Medium'),
         url(../fonts/Rubik-Medium.woff2) format('woff2'),
-        url(../fonts/Rubik-Medium.woff) format('woff'),
-        url(../fonts/Rubik-Medium.ttf) format('ttf');
+        url(../fonts/Rubik-Medium.woff) format('woff');
+        // url(../fonts/Rubik-Medium.ttf) format('ttf');
     font-display: swap;
 }

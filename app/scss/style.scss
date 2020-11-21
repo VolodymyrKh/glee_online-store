@@ -11,26 +11,29 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @extend %rubik-500;
-        font-weight: 600;
+        @extend %rubik-600;
+
     }
 }
 
 .logo {
     font-size: 36px;
     color: $menu-color;
-    padding-left: 65px;
+    padding-left: 63px;
     background-image: url(../images/header-icons/logo.png);
     background-repeat: no-repeat;
     background-position: left center;
-    transition: transform 0.5s;
+    transition: color 0.3s;
 
     &:hover {
-        transform: scale(1.07);
+        color: $btn-color;
     }
 }
 
 .menu {
+    font-size: 15px;
+    padding-left: 150px;
+
     &__list {
         display: flex;
         align-items: center;
@@ -85,6 +88,7 @@
         @extend %user-btn;
         background-color: $btn-lightcolor;
         margin-right: 20px;
+
         &:hover,
         &:focus {
             background-color: $btn-color;
@@ -161,6 +165,94 @@
         right: 34px;
     }
 }
+
+
+.footer-top {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid $footer-text;
+    padding-bottom: 54px;
+
+    &__logo,
+    &__item-title {
+        margin-bottom: 18px;
+    }
+
+    &__item-title {
+        display: block;
+        @extend %dmsans-700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #1f2044;
+    }
+
+    &__logo {
+        font-weight: 600;
+    }
+
+    &__tel,
+    &__email,
+    &__link {
+        @extend %footer-link;
+        margin-bottom: 12px;
+    }
+
+    &__contact,
+    &__service,
+    &__account {
+        max-width: 200px;
+        width: 100%;
+        margin-right: 100px;
+    }
+
+    &__address {
+        font-style: normal;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    &__address-text,
+    &__text {
+        @extend %footer-link;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        margin-bottom: 34px;
+    }
+
+    &__input {
+        background-color: $bg;
+        border: none;
+        padding: 8px 16px;
+        max-width: 170px;
+        outline: transparent;
+        transition: all 0.3s;
+    }
+
+    &__input::placeholder {
+        font-size: 12px;
+        color: #234969;
+    }
+
+    &__btn {
+        display: block;
+        max-width: 100px;
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #a3bbc8;
+        padding: 6px 0;
+        cursor: pointer;
+        outline: transparent;
+        transition: all 0.3s;
+    }
+}
+
+
 
 
 

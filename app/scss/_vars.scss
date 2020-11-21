@@ -3,15 +3,17 @@ $menu-color: #436372;
 $accent: #fcd7b6;
 $btn-color:#a3bbc8;
 $btn-lightcolor: #edf1f4;
+$footer-text: #7b7b7b;
+$bg: #fef7f0;
 
 %rubik-400 {
     font-family: 'Rubik-Regular', sans-serif;
     font-weight: 400;
 }
 
-%rubik-500 {
+%rubik-600 {
     font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 %dmsans-400 {
@@ -39,5 +41,10 @@ $btn-lightcolor: #edf1f4;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+%footer-link {
+    color: $footer-text;
+    @extend %rubik-600;
+    font-size: 14px;
 }

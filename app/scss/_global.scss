@@ -1,13 +1,27 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     @extend %dmsans-500;
     font-size: 18px;
     line-height: 1.5;
     color: $default;
-   }
+}
 
+// .main{
+//     flex-grow: 1;
+// }
 .container {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
+.inner-container {
+    width: 1170px;
+    margin: 0 auto;
+}
