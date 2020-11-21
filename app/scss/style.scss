@@ -196,6 +196,12 @@
     &__link {
         @extend %footer-link;
         margin-bottom: 12px;
+
+        &:hover,
+        &:focus {
+            color: $btn-color;
+            outline: transparent;
+        }
     }
 
     &__contact,
@@ -223,6 +229,12 @@
     &__text {
         margin-bottom: 36px;
     }
+
+    // &__link:hover,
+    // &__link:focus {
+    //     color: $btn-color;
+    //     outline: transparent;
+    // }
 
     &__form {
         display: flex;
@@ -300,6 +312,8 @@
         &:focus {
             color: $btn-color;
             border-bottom: 1px solid $btn-color;
+            outline: transparent;
+
         }
     }
 
