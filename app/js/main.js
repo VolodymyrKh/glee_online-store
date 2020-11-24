@@ -6,4 +6,6 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 4000,
       });
+
+      let mixer = mixitup(".week-product__list");
 })
