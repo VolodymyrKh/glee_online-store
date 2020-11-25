@@ -408,18 +408,22 @@
     margin-bottom: 96px;
 
     &__inner {
-        // display: flex;
-        // justify-content: space-between;
-        display: grid;
+               display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         max-width: 870px;
-        padding: 100px 130px 100px 400px;
-        max-height: 390px;
-        background-color: $bg;
+        width: 100%;
+        padding-left: 390px;
+        padding-right: 130px;
+        height: 390px;
+        margin-right: 30px;
+        background-color: #feefe2;
         color: $slider-title;
         position: relative;
 
@@ -438,7 +442,7 @@
     }
 
     &__descr {
-        margin: 22px 0 30px;
+        margin: 18px 0 30px;
         @extend %rubik-400;
     }
 

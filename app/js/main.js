@@ -4,7 +4,7 @@ $(function() {
         dots: true,
         fade:true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
       });
 
       let mixer = mixitup(".week-product__list");
