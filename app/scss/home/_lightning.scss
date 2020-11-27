@@ -1,0 +1,64 @@
+.lightning {
+    margin-bottom: 96px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 870px;
+        width: 100%;
+        padding-left: 390px;
+        padding-right: 130px;
+        height: 390px;
+        background-color: #feefe2;
+        color: $slider-title;
+        position: relative;
+
+    }
+
+    &__bg {
+        position: absolute;
+        top: -100px;
+        left: 140px;
+    }
+
+    &__heading {
+        @extend %dmsans-700;
+        font-size: 26px;
+        display: block;
+    }
+
+    &__descr {
+        margin: 18px 0 30px;
+        @extend %rubik-400;
+    }
+
+    &__btn {
+        color: $menu-color;
+        max-width: 180px;
+        padding: 18px 28px;
+        background-color: transparent;
+        font-size: 15px;
+        @extend %rubik-600;
+        background-image: url(../images/lightning/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 86% center;
+        transition: background-color 0.3s;
+        border: 1px solid $menu-color;
+        border-radius: 5px;
+
+        &:hover,
+        &:focus {
+            background-color: $accent;
+            outline: transparent;
+        }
+    }
+
+}
+

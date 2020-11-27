@@ -7,5 +7,5 @@ $(function() {
         autoplaySpeed: 3000,
       });
 
-      let mixer = mixitup(".week-product__list");
+      var mixer = mixitup(".week-product__list");
 })

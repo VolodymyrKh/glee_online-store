@@ -1,0 +1,61 @@
+.info {
+    margin-bottom: 68px;
+
+    span {
+        display: block;
+    }
+
+    &__inner {
+        padding: 46px 100px;
+        background-color: $bg;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        padding-left: 124px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 46px;
+        }
+
+        &--support::before {
+            width: 51px;
+            height: 54px;
+            background-image: url(../images/info/hours.svg);
+        }
+
+        &--delivery::before {
+            width: 54px;
+            height: 37px;
+            background-image: url(../images/info/delivery.svg);
+        }
+
+        &--payment::before {
+            width: 54px;
+            height: 52px;
+            background-image: url(../images/info/payment.svg);
+        }
+    }
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 700;
+        color: #414141;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        color: #585858;
+    }
+}

@@ -1,0 +1,75 @@
+.main-slider {
+    &__item {
+        padding: 216px 0 280px;
+        background-repeat: no-repeat;
+        background-position: 82% center;
+    }
+
+    &__title {
+        display: block;
+        text-transform: uppercase;
+        font-size: 72px;
+        @extend %rubik-600;
+        max-width: 470px;
+        margin-bottom: 28px;
+        line-height: 1;
+        color: $slider-title;
+    }
+
+    &__text {
+        font-size: 18px;
+        @extend %rubik-400;
+        color: $menu-color;
+        max-width: 370px;
+        margin-bottom: 34px;
+    }
+
+    &__btn {
+        display: block;
+        color: #ffffff;
+        max-width: 200px;
+        padding: 22px 28px 20px;
+        background-color: $btn-color;
+        font-size: 15px;
+        @extend %rubik-600;
+        background-image: url(../images/slider/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 86% center;
+        transition: background-color 0.3s;
+
+        &:hover,
+        &:focus {
+            background-color: $slider-title;
+            outline: transparent;
+        }
+    }
+
+    .slick-dots li+li {
+        margin-left: 12px;
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
+    }
+
+    .slick-dots button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 10px;
+        @extend %rubik-600;
+        border: none;
+        padding: 0;
+        background-color: #ffffff;
+        opacity: 0.3;
+        outline: transparent;
+    }
+
+    .slick-dots .slick-active button {
+        opacity: 1;
+    }
+}

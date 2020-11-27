@@ -30,7 +30,32 @@ body {
 }
 
 .title {
+    @extend %dmsans-700;
+    display: block;
     font-size: 36px;
     color: $section-title;
     margin-bottom: 18px;
+}
+
+.filter {
+    &__btn {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        font-size: 16px;
+        color: $filter-color;
+        @extend %dmsans-700;
+        transition: color 0.3s;
+
+        &+& {
+            margin-left: 24px;
+        }
+
+        &:hover,
+        .mixitup-control-active {
+            cursor: pointer;
+            color: $section-title;
+        }
+    }
 }
