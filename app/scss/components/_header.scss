@@ -1,0 +1,150 @@
+.header {
+    padding: 45px 0;
+
+    .menu {
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %rubik-600;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            padding-left: 115px;
+        }
+
+        &__item {
+            margin-left: 35px;
+
+            // &+& {
+            //     margin-left: 35px;
+            // }   - не працює, не розумію чому
+        }
+
+        &__link {
+            color: $menu-color;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s;
+
+            &:focus,
+            &:hover {
+                color: $btn-color;
+                border-bottom: 1px solid $btn-color;
+                outline: transparent;
+            }
+        }
+
+        &__btns {
+            display: flex;
+        }
+
+        &__btn {
+            border: none;
+            padding: 0;
+            @extend %dmsans-500;
+            font-size: 10px;
+            color: $menu-color;
+            position: relative;
+            transition: background-color 0.3s;
+
+            &::before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &:focus,
+            &:hover {
+                box-shadow: inset 0 0 5px rgba(185, 179, 179, 0.5);
+                background-color: $btn-lightcolor;
+                outline: transparent;
+            }
+
+            &--search {
+                @extend %user-btn;
+                background-color: $btn-lightcolor;
+                margin-right: 20px;
+
+                &::before {
+                    background-image: url(../images/header-icons/search.svg);
+                    @extend %center;
+                }
+
+                &:focus,
+                &:hover {
+                    background-color: $btn-color;
+                    cursor: pointer;
+                }
+            }
+
+            &--heart {
+                width: 90px;
+                border-radius: 45px 0 0 45px;
+                background-color: $accent;
+
+                &::before {
+                    background-image: url(../images/header-icons/heart.svg);
+                    bottom: 13px;
+                    left: 40px;
+                }
+            }
+
+            &--cart {
+                width: 90px;
+                border-radius: 0 45px 45px 0;
+                background-color: $accent;
+                margin-right: 20px;
+
+                &::before {
+                    background-image: url(../images/header-icons/cart.svg);
+                    right: 40px;
+                    bottom: 13px;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 1px;
+                    height: 32px;
+                    background-color: #fff;
+                    top: 10px;
+                }
+            }
+
+            &--dots {
+                @extend %user-btn;
+                background-color: $btn-color;
+
+                &::before {
+                    background-image: url(../images/header-icons/dots.svg);
+                    @extend %center;
+                }
+            }
+        }
+
+        &__data {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        &__data--heart {
+            top: 13px;
+            left: 52px;
+        }
+
+        &__data--cart {
+            top: 13px;
+            right: 34px;
+        }
+    }
+}
