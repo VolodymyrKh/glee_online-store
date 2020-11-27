@@ -3,156 +3,10 @@
 @import 'libs';
 @import 'reset';
 @import 'global';
+@import 'components/header';
+@import 'components/footer';
 
 
-.header {
-    padding: 45px 0;
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @extend %rubik-600;
-
-    }
-}
-
-.menu {
-    font-size: 15px;
-    padding-left: 150px;
-
-    &__list {
-        display: flex;
-        align-items: center;
-    }
-
-    &__item+.menu__item {
-        margin-left: 35px;
-    }
-
-    &__link {
-        color: $menu-color;
-        border-bottom: 1px solid transparent;
-        transition: all 0.3s;
-
-        &:hover,
-        &:focus {
-            color: $btn-color;
-            border-bottom: 1px solid $btn-color;
-            outline: transparent;
-        }
-    }
-}
-
-.user-nav {
-    display: flex;
-
-    &__link {
-        @extend %dmsans-500;
-        font-size: 10px;
-        color: $menu-color;
-        position: relative;
-        transition: background-color 0.3s;
-
-        &::before {
-            content: '';
-            width: 18px;
-            height: 18px;
-            position: absolute;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &:hover,
-        &:focus {
-            box-shadow: inset 0 0 5px rgba(185, 179, 179, 0.5);
-            background-color: $btn-lightcolor;
-            outline: transparent;
-        }
-    }
-
-
-    &__link--search {
-        @extend %user-btn;
-        background-color: $btn-lightcolor;
-        margin-right: 20px;
-
-        &:hover,
-        &:focus {
-            background-color: $btn-color;
-        }
-    }
-
-    &__link--heart {
-        width: 90px;
-        border-radius: 45px 0 0 45px;
-        background-color: $accent;
-    }
-
-    &__link--cart {
-        width: 90px;
-        border-radius: 0 45px 45px 0;
-        background-color: $accent;
-        margin-right: 20px;
-    }
-
-    &__link--dots {
-        @extend %user-btn;
-        background-color: $btn-color;
-    }
-
-    &__link--search::before {
-        background-image: url(../images/header-icons/search.png);
-        @extend %center;
-    }
-
-    &__link--heart::before {
-        background-image: url(../images/header-icons/heart.png);
-        bottom: 13px;
-        left: 40px;
-    }
-
-    &__link--cart::before {
-        background-image: url(../images/header-icons/cart.png);
-        right: 40px;
-        bottom: 13px;
-    }
-
-    &__link--cart::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 32px;
-        background-color: #fff;
-        top: 10px;
-    }
-
-    &__link--dots::before {
-        background-image: url(../images/header-icons/dots.png);
-        @extend %center;
-    }
-
-    &__data {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #fff;
-        text-align: center;
-        line-height: 16px;
-    }
-
-    &__data--heart {
-        top: 13px;
-        left: 52px;
-    }
-
-    &__data--cart {
-        top: 13px;
-        right: 34px;
-    }
-}
 
 .main-slider {
     &__item {
@@ -180,6 +34,7 @@
     }
 
     &__btn {
+        display: block;
         color: #ffffff;
         max-width: 200px;
         padding: 22px 28px 20px;
@@ -408,7 +263,7 @@
     margin-bottom: 96px;
 
     &__inner {
-               display: grid;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
@@ -422,7 +277,6 @@
         padding-left: 390px;
         padding-right: 130px;
         height: 390px;
-        margin-right: 30px;
         background-color: #feefe2;
         color: $slider-title;
         position: relative;
@@ -469,163 +323,3 @@
 
 }
 
-.footer-top {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid $footer-text;
-    padding-bottom: 54px;
-    margin-top: 10px;
-
-    &__item-title {
-        margin-bottom: 18px;
-    }
-
-    &__item-title {
-        display: block;
-        @extend %dmsans-700;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: #1f2044;
-    }
-
-    &__logo {
-        margin: -10px 0 28px;
-    }
-
-    &__tel,
-    &__email,
-    &__link {
-        @extend %footer-link;
-        margin-bottom: 12px;
-
-        &:hover,
-        &:focus {
-            color: $btn-color;
-            outline: transparent;
-        }
-    }
-
-    &__contact,
-    &__service,
-    &__account {
-        max-width: 200px;
-        width: 100%;
-        margin-right: 100px;
-    }
-
-    &__address {
-        font-style: normal;
-
-        span {
-            text-transform: uppercase;
-        }
-    }
-
-    &__address-text,
-    &__text {
-        @extend %footer-link;
-        margin-bottom: 18px;
-    }
-
-    &__text {
-        margin-bottom: 36px;
-    }
-
-    &__form {
-        display: flex;
-    }
-
-    &__input {
-        background-color: $bg;
-        border: none;
-        font-size: 14px;
-        padding: 8px 16px;
-        max-width: 170px;
-        cursor: pointer;
-        outline: transparent;
-        transition: box-shadow 0.3s;
-    }
-
-    &__input:hover,
-    &__input:focus {
-        box-shadow: inset 0 0 5px rgba(185, 179, 179, 0.5);
-
-    }
-
-    &__btn:hover,
-    &__btn:focus {
-        color: $accent;
-    }
-
-    &__input::placeholder {
-        font-size: 12px;
-        color: #234969;
-    }
-
-    &__btn {
-        display: block;
-        max-width: 100px;
-        width: 100%;
-        border: none;
-        font-size: 14px;
-        color: #ffffff;
-        background-color: $btn-color;
-        padding: 6px 0;
-        cursor: pointer;
-        outline: transparent;
-        transition: all 0.3s;
-    }
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 0;
-    @extend %footer-link;
-}
-
-.fb-menu {
-    &__list {
-        display: flex;
-    }
-
-    &__item {
-        @extend %footer-link;
-        position: relative;
-    }
-
-    &__item+.fb-menu__item {
-        padding-left: 30px;
-    }
-
-    &__link {
-        @extend %footer-link;
-        border-bottom: 1px solid transparent;
-        transition: all 0.3s;
-
-        &:hover,
-        &:focus {
-            color: $btn-color;
-            border-bottom: 1px solid $btn-color;
-            outline: transparent;
-
-        }
-    }
-
-    &__item--border::before {
-        content: "";
-        display: block;
-        width: 1px;
-        height: 16px;
-        background-color: $footer-text;
-        position: absolute;
-        top: 2px;
-        left: 15px;
-    }
-}
-
-
-
-
-
-@import 'media';

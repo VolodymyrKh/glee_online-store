@@ -10,6 +10,7 @@ body {
     font-size: 18px;
     line-height: 1.5;
     color: $default;
+    background-color: #FFFFFF;
 }
 
 .main {
@@ -17,14 +18,15 @@ body {
 }
 
 .container {
-    max-width: 1800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
 
-.inner-container {
-    width: 1170px;
-    margin: 0 auto;
+    &--out {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 }
 
 .title {
