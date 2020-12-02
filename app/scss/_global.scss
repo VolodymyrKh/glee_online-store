@@ -53,7 +53,7 @@ body {
         }
 
         &:hover,
-        .mixitup-control-active {
+        &.mixitup-control-active {
             cursor: pointer;
             color: $section-title;
         }
