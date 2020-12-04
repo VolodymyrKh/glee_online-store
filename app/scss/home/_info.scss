@@ -5,9 +5,13 @@
         display: block;
     }
 
-    &__inner {
+    &__wrapper {
         padding: 46px 100px;
         background-color: $bg;
+
+    }
+
+    &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -27,22 +31,28 @@
             left: 46px;
         }
 
-        &--support::before {
-            width: 51px;
-            height: 54px;
-            background-image: url(../images/info/hours.svg);
+        &--support {
+            &::before {
+                width: 51px;
+                height: 54px;
+                background-image: url(../images/info/hours.svg);
+            }
         }
 
-        &--delivery::before {
-            width: 54px;
-            height: 37px;
-            background-image: url(../images/info/delivery.svg);
+        &--delivery {
+            &::before {
+                width: 54px;
+                height: 37px;
+                background-image: url(../images/info/delivery.svg);
+            }
         }
 
-        &--payment::before {
-            width: 54px;
-            height: 52px;
-            background-image: url(../images/info/payment.svg);
+        &--payment {
+            &::before {
+                width: 54px;
+                height: 52px;
+                background-image: url(../images/info/payment.svg);
+            }
         }
     }
 

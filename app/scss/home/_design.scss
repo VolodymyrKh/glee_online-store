@@ -6,36 +6,41 @@
         margin-bottom: 70px;
     }
 
-    &__list{
+    &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 30px;
     }
+}
 
-    &__item {
+.design-card {
+    &__link {
         display: block;
         max-width: 370px;
-        padding: 40px 160px 130px 36px;
         @extend %dmsans-700;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        position: relative;
         transition: transform 0.3s;
 
-        &:focus,
         &:hover {
             transform: scale(1.05);
         }
     }
 
-    &__item-heading {
+    &__info {
+        max-width: 175px;
+        position: absolute;
+        top: 14%;
+        left: 10%;
+    }
+
+    &__heading {
         font-size: 20px;
         line-height: 1.2;
         color: $section-title;
         margin-bottom: 10px;
     }
 
-    &__item-type {
+    &__type {
         font-size: 16px;
         color: $filter-color;
     }

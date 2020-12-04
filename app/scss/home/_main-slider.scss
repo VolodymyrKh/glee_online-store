@@ -37,8 +37,7 @@
         background-position: 86% center;
         transition: background-color 0.3s;
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: $slider-title;
             outline: transparent;
         }
