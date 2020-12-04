@@ -24,8 +24,7 @@ body {
 
     &--out {
         max-width: 1800px;
-        margin: 0 auto;
-        padding: 0 15px;
+
     }
 }
 
@@ -53,9 +52,9 @@ body {
         }
 
         &:hover,
-        .mixitup-control-active {
+        &.mixitup-control-active {
             cursor: pointer;
             color: $section-title;
         }
-    }
+    } 
 }

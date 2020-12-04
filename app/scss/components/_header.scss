@@ -11,15 +11,13 @@
         &__list {
             display: flex;
             align-items: center;
-            padding-left: 115px;
+            // padding-left: 115px; даний відступ був прописаний для відповідності цієї частини до макету 
         }
 
         &__item {
-            margin-left: 35px;
-
-            // &+& {
-            //     margin-left: 35px;
-            // }   - не працює, не розумію чому
+            &:not(:last-child) {
+                margin-right: 35px;
+            }
         }
 
         &__link {
@@ -27,7 +25,6 @@
             border-bottom: 1px solid transparent;
             transition: all 0.3s;
 
-            &:focus,
             &:hover {
                 color: $btn-color;
                 border-bottom: 1px solid $btn-color;
@@ -43,7 +40,7 @@
             border: none;
             padding: 0;
             @extend %dmsans-500;
-            font-size: 10px;
+            font-size: 0;
             color: $menu-color;
             position: relative;
             transition: background-color 0.3s;
@@ -57,7 +54,6 @@
                 background-size: contain;
             }
 
-            &:focus,
             &:hover {
                 box-shadow: inset 0 0 5px rgba(185, 179, 179, 0.5);
                 background-color: $btn-lightcolor;
@@ -74,7 +70,6 @@
                     @extend %center;
                 }
 
-                &:focus,
                 &:hover {
                     background-color: $btn-color;
                     cursor: pointer;
@@ -133,18 +128,19 @@
             height: 16px;
             border-radius: 50%;
             background-color: #fff;
+            font-size: 10px;
             text-align: center;
             line-height: 16px;
-        }
 
-        &__data--heart {
-            top: 13px;
-            left: 52px;
-        }
+            &--heart {
+                top: 13px;
+                left: 52px;
+            }
 
-        &__data--cart {
-            top: 13px;
-            right: 34px;
+            &--cart {
+                top: 13px;
+                right: 34px;
+            }
         }
     }
 }

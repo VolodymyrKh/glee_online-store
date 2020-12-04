@@ -46,8 +46,10 @@ $filter-color: #8b8b8b;
     transform: translate(-50%, -50%);
 }
 
-%footer-link {
-    color: $footer-text;
-    @extend %rubik-400;
-    font-size: 14px;
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }
