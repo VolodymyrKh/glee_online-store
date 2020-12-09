@@ -1,0 +1,127 @@
+.mission {
+  margin-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bg {
+    max-width: 570px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__content {
+    max-width: 570px;
+    padding: 70px 0 82px 18px;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: $slider-title;
+  }
+
+  &__experience {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__years {
+    @extend %rubik-600;
+    font-size: 140px;
+    line-height: 0.8;
+    color: $btn-color;
+    margin-right: 30px;
+  }
+
+  &__achievments {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & span {
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    padding-bottom: 56px;
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 2;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 500px;
+      height: 2px;
+      background-color: #ebeef3;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @extend %dmsans-700;
+    font-size: 16px;
+    padding: 8px 24px 12px 56px;
+    margin-right: 30px;
+    position: relative;
+
+
+    &:not(:last-child) {
+      border-right: 1px solid $btn-color;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 24px;
+      background-repeat: no-repeat;
+    }
+
+    &--pen {
+      &::before {
+        width: 37px;
+        height: 38px;
+        background-image: url(../../images/mission/pen.svg);
+      }
+    }
+
+    &--horn {
+      padding-right: 34px;
+
+      &::before {
+        width: 44px;
+        height: 40px;
+        background-image: url(../../images/mission/horn.svg);
+      }
+    }
+
+    &--award {
+      &::before {
+        width: 43px;
+        height: 42px;
+        background-image: url(../../images/mission/award.svg);
+      }
+    }
+  }
+
+  &__nr {
+    font-size: 36px;
+    line-height: 1.2;
+  }  
+}
