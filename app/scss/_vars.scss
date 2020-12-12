@@ -46,6 +46,18 @@ $filter-color: #8b8b8b;
     transform: translate(-50%, -50%);
 }
 
+%clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }

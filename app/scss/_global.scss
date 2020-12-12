@@ -47,8 +47,8 @@ body {
         @extend %dmsans-700;
         transition: color 0.3s;
 
-        &+& {
-            margin-left: 24px;
+        &:not(:last-child) {
+            margin-right: 24px;
         }
 
         &:hover,

@@ -24,7 +24,7 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     font-size: 16px;
     position: relative;
-    transition: transform 0.5s;
+    transition: all 0.5s;
 
     &:hover {
         cursor: pointer;
@@ -32,6 +32,10 @@
 
         .product-card__links {
             transform: translateX(-50%) scale(1);
+        }
+
+        .product-card__link {
+            box-shadow: 0px 8px 32px 13px rgba(37, 37, 37, 0.05);
         }
     }
 
@@ -42,7 +46,7 @@
         position: absolute;
         top: 48%;
         left: 50%;
-        transform: scale(0);
+        transform: translateX(-50%) scale(0);
         transition: transform 0.3s;
     }
 
@@ -51,7 +55,6 @@
         border: none;
         border-radius: 50%;
         background-color: #ffffff;
-        box-shadow: 0px 8px 47px 13px rgba(37, 37, 37, 0.05);
         width: 45px;
         height: 45px;
         position: relative;
@@ -68,6 +71,7 @@
 
         &:hover {
             background-color: $btn-color;
+            cursor: pointer;
 
             path {
                 fill: #ffffff;
