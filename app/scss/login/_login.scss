@@ -21,6 +21,7 @@
         width: 100%;
         font-size: 18px;
         outline: transparent;
+        transition: box-shadow 1s;
 
         &:hover {
             cursor: pointer;

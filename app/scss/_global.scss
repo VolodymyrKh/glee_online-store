@@ -24,7 +24,6 @@ body {
 
     &--out {
         max-width: 1800px;
-
     }
 }
 
@@ -48,7 +47,7 @@ body {
         transition: color 0.3s;
 
         &:not(:last-child) {
-            margin-right: 24px;
+            margin-right: 23px;
         }
 
         &:hover,

@@ -64,6 +64,9 @@
         display: flex;
         margin-top: 36px;
     }
+    &__label {
+        font-size: 0;
+    }
 
     &__input {
         background-color: $bg;

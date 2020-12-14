@@ -53,8 +53,8 @@
     }
 
     &__type {
-        @extend %overflow;
         display: block;
+        @extend %overflow;        
         font-size: 16px;
         color: $filter-color;
     }

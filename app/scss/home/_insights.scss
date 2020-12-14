@@ -15,7 +15,7 @@
 
     &__heading-link {
         @extend %dmsans-700;
-        font-size: 16;
+        font-size: 16px;
         color: $default;
         transition: color 0.3s;
 
@@ -35,16 +35,19 @@
     &__items {
         display: flex;
         justify-content: space-between;
+        position: relative;
+        z-index: 10;
     }
 }
 
 .insights-card {
     max-width: 370px;
-    display: flex;
-    flex-direction: column;
     background-color: #ffffff;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding-bottom: 60px;
     border-radius: 5px;
+    overflow: hidden;
+    position: relative;
     transition: transform 0.5s;
 
     &:hover {
@@ -52,16 +55,27 @@
         transform: translate(-1.5%, -1.5%);
     }
 
-    &__wrapper {display: flex;
-        flex-direction: column;
-        flex: 1;
-        padding: 0 30px 25px 30px;
+    &__link {
+        display: block;
+    }
+
+    &__image {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__wrapper {
+        margin-top: -15px;
+        padding: 0 30px;
     }
 
     &__news {
-        width: 103px;
-        height: 30px;
+        display: inline-block;
+        padding: 0 30px;
         @extend %dmsans-700;
+        @extend %overflow;
+        max-width: 100%;
         text-transform: uppercase;
         background-color: $btn-color;
         color: #ffffff;
@@ -70,32 +84,34 @@
         line-height: 30px;
         border-radius: 15px;
         position: relative;
-        margin-top: -15px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
 
     &__text-link {
         display: block;
         color: $default;
-        // padding-bottom: 14px;
-        // border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 14px;
+        padding-bottom: 14px;
     }
 
     &__text {
-        // min-height: 64px;
+        @extend %dmsans-500;
+        @extend %clamp;
+        -webkit-line-clamp: 3;
+        font-size: 18px;
         line-height: 1.2;
-
     }
 
-        &__info {
+    &__info {
         @extend %rubik-400;
         text-transform: uppercase;
         font-size: 12px;
         padding-top: 14px;
         border-top: 1px solid #e0e0e0;
-        margin-top: auto;
         display: flex;
+        position: absolute;
+        width: 80%;
+        left: 30px;
+        bottom: 25px;
 
         span {
             display: block;
@@ -129,18 +145,5 @@
             left: 0;
         }
     }
-
 }
 
-.partners {
-    min-height: 436px;
-    padding: 260px 0 90px;
-    background-color: $bg;
-    margin-top: -177px;
-
-    &__list {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
