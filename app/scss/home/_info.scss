@@ -33,7 +33,7 @@
                 display: block;
                 width: 1px;
                 height: 100%;
-                background-color: #e8e4df;                
+                background-color: #e8e4df;
                 position: absolute;
                 top: 0;
                 right: -144px;
@@ -66,16 +66,16 @@
     }
 
     &__heading {
+        @extend %dmsans-700;
         @extend %overflow;
         font-size: 18px;
-        font-weight: 700;
         color: #414141;
         margin-bottom: 8px;
     }
 
     &__text {
+        @extend %dmsans-400;
         font-size: 16px;
-        font-weight: 400;
         color: #585858;
         @extend %clamp;
         -webkit-line-clamp: 3;

@@ -29,6 +29,8 @@
 
   &__years {
     @extend %rubik-600;
+    @extend %overflow;
+    max-width: 50%;
     font-size: 140px;
     line-height: 0.8;
     color: $btn-color;
@@ -39,8 +41,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    max-width: 50%;
 
     & span {
+      @extend %overflow;
+
       &:not(:last-child) {
         margin-bottom: 6px;
       }
@@ -52,10 +57,9 @@
   }
 
   &__text {
-    padding-bottom: 56px;
     position: relative;
-    margin-bottom: 20px;
-    line-height: 2;
+    padding-bottom: 60px;
+    margin-bottom: 25px;
 
     &::after {
       content: '';
@@ -66,6 +70,12 @@
       height: 2px;
       background-color: #ebeef3;
     }
+
+    p {
+      @extend %clamp;
+      -webkit-line-clamp: 10;
+      line-height: 1.9;
+    }
   }
 
   &__list {
@@ -74,6 +84,7 @@
 
   &__item {
     @extend %dmsans-700;
+    max-width: 33.33%;
     font-size: 16px;
     padding: 8px 24px 12px 56px;
     margin-right: 30px;
@@ -97,7 +108,7 @@
       &::before {
         width: 37px;
         height: 38px;
-        background-image: url(../../images/mission/pen.svg);
+        background-image: url(../images/mission/pen.svg);
       }
     }
 
@@ -107,7 +118,7 @@
       &::before {
         width: 44px;
         height: 40px;
-        background-image: url(../../images/mission/horn.svg);
+        background-image: url(../images/mission/horn.svg);
       }
     }
 
@@ -115,7 +126,7 @@
       &::before {
         width: 43px;
         height: 42px;
-        background-image: url(../../images/mission/award.svg);
+        background-image: url(../images/mission/award.svg);
       }
     }
   }
@@ -123,5 +134,11 @@
   &__nr {
     font-size: 36px;
     line-height: 1.2;
-  }  
+  }
+
+  &__nr,
+  &__descr {
+    display: block;
+    @extend %overflow;
+  }
 }

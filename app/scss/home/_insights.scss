@@ -1,12 +1,12 @@
 .insights {
-    min-height: 435px;
+    position: relative;
     margin-bottom: 60px;
 
     &__heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 290px;
     }
 
     &__title {
@@ -35,115 +35,9 @@
     &__items {
         display: flex;
         justify-content: space-between;
-        position: relative;
-        z-index: 10;
-    }
-}
-
-.insights-card {
-    max-width: 370px;
-    background-color: #ffffff;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    padding-bottom: 60px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.5s;
-
-    &:hover {
-        cursor: pointer;
-        transform: translate(-1.5%, -1.5%);
-    }
-
-    &__link {
-        display: block;
-    }
-
-    &__image {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    &__wrapper {
-        margin-top: -15px;
-        padding: 0 30px;
-    }
-
-    &__news {
-        display: inline-block;
-        padding: 0 30px;
-        @extend %dmsans-700;
-        @extend %overflow;
-        max-width: 100%;
-        text-transform: uppercase;
-        background-color: $btn-color;
-        color: #ffffff;
-        font-size: 14px;
-        text-align: center;
-        line-height: 30px;
-        border-radius: 15px;
-        position: relative;
-        margin-bottom: 12px;
-    }
-
-    &__text-link {
-        display: block;
-        color: $default;
-        padding-bottom: 14px;
-    }
-
-    &__text {
-        @extend %dmsans-500;
-        @extend %clamp;
-        -webkit-line-clamp: 3;
-        font-size: 18px;
-        line-height: 1.2;
-    }
-
-    &__info {
-        @extend %rubik-400;
-        text-transform: uppercase;
-        font-size: 12px;
-        padding-top: 14px;
-        border-top: 1px solid #e0e0e0;
-        display: flex;
         position: absolute;
-        width: 80%;
-        left: 30px;
-        bottom: 25px;
-
-        span {
-            display: block;
-            padding-left: 18px;
-            margin-right: 25px;
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                width: 14px;
-                height: 14px;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        }
-    }
-
-    &__date {
-        &::before {
-            background-image: url(../../images/insights/calendar.svg);
-            top: 2px;
-            left: 0;
-        }
-    }
-
-    &__admin {
-        &::before {
-            background-image: url(../../images/insights/user.svg);
-            top: 2px;
-            left: 0;
-        }
+        width: 100%;
+        top: 95px;
     }
 }
 

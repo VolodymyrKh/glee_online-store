@@ -8,10 +8,10 @@
         align-items: center;
         @extend %rubik-600;
 
+
         &__list {
             display: flex;
             align-items: center;
-            // padding-left: 115px; даний відступ був прописаний для відповідності цієї частини до макету 
         }
 
         &__item {
@@ -130,7 +130,7 @@
             background-color: #fff;
             font-size: 10px;
             text-align: center;
-            line-height: 16px;
+            line-height: 1.6;
 
             &--heart {
                 top: 13px;
@@ -141,6 +141,14 @@
                 top: 13px;
                 right: 34px;
             }
+        }
+    }
+
+    .logo {
+        img {
+            width: 146px;
+            height: 39px;
+            object-fit: cover;
         }
     }
 }

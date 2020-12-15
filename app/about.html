@@ -82,24 +82,26 @@
                             </p>
                         </div>
                         <h2 class="title mission__title">Mission of our creative house</h2>
-
-                        <p class="mission__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum</p>
-
+                        <div class="mission__text">
+                            <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in
+                                voluptate velit esse cillum</p>
+                        </div>
                         <ul class="mission__list">
                             <li class="mission__item mission__item--pen">
-                                <p class="mission__nr">520+</p>
-                                <p class="mission__descr">Projects</p>
+                                <span class="mission__nr">520+</span>
+                                <span class="mission__descr">Projects</span>
                             </li>
                             <li class="mission__item mission__item--horn">
-                                <p class="mission__nr">$4M</p>
-                                <p class="mission__descr">Revenue</p>
+                                <span class="mission__nr">$4M</span>
+                                <span class="mission__descr">Revenue</span>
                             </li>
                             <li class="mission__item mission__item--award">
-                                <p class="mission__nr">250</p>
-                                <p class="mission__descr">Awards</p>
+                                <span class="mission__nr">250</span>
+                                <span class="mission__descr">Awards</span>
                             </li>
                         </ul>
                     </div>
@@ -113,20 +115,20 @@
                 <div class="about-info__wrapper">
                     <ul class="about-info__list">
                         <li class="about-info__item about-info__item--rate">
-                            <p class="about-info__nr">99%</p>
-                            <p class="about-info__descr">Satisﬁed Clients Rate</p>
+                            <span class="about-info__nr">99%</span>
+                            <span class="about-info__descr">Satisﬁed Clients Rate</span>
                         </li>
                         <li class="about-info__item about-info__item--products">
-                            <p class="about-info__nr">5020+</p>
-                            <p class="about-info__descr">Products delivered</p>
+                            <span class="about-info__nr">5020+</span>
+                            <span class="about-info__descr">Products delivered</span>
                         </li>
                         <li class="about-info__item about-info__item--time">
-                            <p class="about-info__nr">23hr</p>
-                            <p class="about-info__descr">Daily Working Time</p>
+                            <span class="about-info__nr">23hr</span>
+                            <span class="about-info__descr">Daily Working Time</span>
                         </li>
                         <li class="about-info__item about-info__item--brands">
-                            <p class="about-info__nr">140+</p>
-                            <p class="about-info__descr">Brands in Store</p>
+                            <span class="about-info__nr">140+</span>
+                            <span class="about-info__descr">Brands in Store</span>
                         </li>
                     </ul>
                 </div>
@@ -138,10 +140,14 @@
                 <div class="team__inner">
                     <div class="team__content">
                         <h2 class="title">Our Team</h2>
-                        <p class="team__text">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod
-                            tempor inciLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <div class="team__text">
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do
+                                eiusmod
+                                tempor inciLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
                         <a class="team__join" href="#">Join With Us &#8195
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="15px" height="11px">
@@ -263,10 +269,11 @@
             </div>
         </section>
 
-        <seclion class="insights">
+        <section class="insights">
             <div class="container">
                 <div class="insights__heading">
                     <h2 class="title insights__title">Our Insights & Articles</h2>
+                    <!-- всюди, де svg икладені в html, вони анімуються  -->
                     <a class="insights__heading-link" href="#">View All &nbsp
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px"
                             height="12px">
@@ -276,82 +283,94 @@
                     </a>
                 </div>
 
-                <div class="insights__items">
-                    <article class="insights-card">
-                        <!-- оскільки немає ТЗ, то в цьому блоці я вирішив зробити посиланнями контентне зображення і текст. Можна також і інші елементи -->
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/1.jpg" alt="insight image">
+                <div class="insights__items container">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/1.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+
+
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Diusmod tempor incididunt ut labore et dolore magna
                                     aliqua. Ut
-                                    enim ad minim veniam</p>
+                                    enim ad minim veniam</h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <!-- різні ікoнки на елементах - різні класи -->
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
 
-                    <article class="insights-card">
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/2.jpg" alt="insight image">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/2.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore </p>
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore </h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
 
-                    <article class="insights-card">
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/3.jpg" alt="insight image">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/3.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim
+                                </h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
+
             <div class="partners">
                 <div class="container">
                     <ul class="partners__list">
                         <li class="partners__item">
-                            <img src="images/insights/partner-1.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-1.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-2.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-2.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-3.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-3.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-4.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-4.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-5.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-5.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                     </ul>
                 </div>
             </div>
-        </seclion>
+        </section>
 
     </main>
 

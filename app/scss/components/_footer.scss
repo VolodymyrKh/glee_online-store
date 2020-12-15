@@ -64,6 +64,7 @@
         display: flex;
         margin-top: 36px;
     }
+
     &__label {
         font-size: 0;
     }
@@ -99,7 +100,7 @@
         padding: 6px 0;
         cursor: pointer;
         outline: transparent;
-        transition: all 0.3s;
+        transition: color 0.3s;
 
         &:hover {
             color: $accent;
@@ -119,13 +120,10 @@
     &__nav-item {
         position: relative;
 
-        &+& {
-            padding-left: 30px;
-        }
+        &:not(:last-child) {
+            padding-right: 30px;
 
-        &:not(:first-child) {
-
-            &:before {
+            &::after {
                 content: "";
                 display: block;
                 width: 1px;
@@ -133,7 +131,7 @@
                 background-color: $footer-text;
                 position: absolute;
                 top: 2px;
-                left: 15px;
+                right: 15px;
             }
         }
     }

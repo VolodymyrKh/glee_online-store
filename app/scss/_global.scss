@@ -29,10 +29,11 @@ body {
 
 .title {
     @extend %dmsans-700;
-    display: block;
     font-size: 36px;
     color: $section-title;
     margin-bottom: 18px;
+    @extend %clamp;
+    -webkit-line-clamp: 2;
 }
 
 .filter {
@@ -55,6 +56,5 @@ body {
             cursor: pointer;
             color: $section-title;
         }
-    } 
+    }
 }
-

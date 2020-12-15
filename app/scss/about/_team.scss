@@ -14,8 +14,11 @@
     }
 
     &__text {
-        line-height: 1.9;
         margin-bottom: 30px;
+
+        p {
+            line-height: 1.9;
+        }
     }
 
     &__join {
@@ -51,15 +54,20 @@
 
     &__item {
         max-width: 370px;
+        width: 100%;
         padding-bottom: 40px;
         overflow: hidden;
     }
 
     &__link {
-        display: block;
+        height: 320px;
+        @extend %center-flex;
     }
 
     &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         transition: all 0.5s;
 
         &:hover {
@@ -81,10 +89,19 @@
         position: relative;
     }
 
+    &__naming {
+        max-width: 60%;
+    }
+
     &__name {
         @extend %dmsans-700;
         font-size: 22px;
         margin-bottom: 6px;
+    }
+
+    &__name,
+    &__position {
+        @extend %overflow;
     }
 
     &__socials {

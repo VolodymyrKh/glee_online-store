@@ -1,23 +1,27 @@
+// тут контент ніяк не обмежував по кількості рядків,
+// тому що цей розділ скаладається із самого тексту
+
 .terms {
     @extend %rubik-400;
     font-size: 16px;
+    line-height: 1.8;
     color: $slider-title;
     margin-bottom: 90px;
 
     &__title {
         @extend %rubik-600;
         font-size: 24px;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
 
     &__list-wrapper {
         padding-left: 32px;
-        margin-bottom: 58px;
+        margin-bottom: 52px;
     }
 
     &__list {
         list-style-type: decimal-leading-zero;
-            }
+    }
 
     &__item {
         padding-left: 9px;
@@ -28,9 +32,6 @@
     }
 
     &__text {
-        line-height: 1.7;
-    }
-    &__collect {
         margin-bottom: 60px;
     }
 }

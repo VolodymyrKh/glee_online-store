@@ -1,5 +1,5 @@
 .week-product {
-    margin-bottom: 185px;
+    margin-bottom: 96px;
 
     &__menu {
         text-align: center;
@@ -10,105 +10,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 40px 30px;
+        margin-bottom: 185px;
     }
 }
 
-.product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 33px 0;
-    max-width: 270px;
-    width: 100%;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    font-size: 16px;
-    position: relative;
-    transition: all 0.5s;
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-
-        .product-card__links {
-            transform: translateX(-50%) scale(1);
-        }
-
-        .product-card__link {
-            box-shadow: 0px 8px 32px 13px rgba(37, 37, 37, 0.05);
-        }
-    }
-
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        width: 170px;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translateX(-50%) scale(0);
-        transition: transform 0.3s;
-    }
-
-    &__link {
-        width: 45px;
-        height: 45px;
-        border: none;
-        border-radius: 50%;
-        font-size: 0;
-        background-color: #ffffff;
-        position: relative;
-        transition: all 0.5s;
-
-        svg {
-            position: absolute;
-            @extend %center;
-
-            path {
-                transition: fill 0.5s;
-            }
-        }
-
-        &:hover {
-            background-color: $btn-color;
-            cursor: pointer;
-
-            path {
-                fill: #ffffff;
-            }
-        }
-    }
-
-    &__img-wrap {
-        height: 206px;
-        // 206px - максимальна висота із заданих картинок, тут вони відображаються, як на макеті,
-        // інші зображення будуть маштабуватись в межах макс висоти і ширини 
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-
-    &__img {
-        max-height: 100%;
-    }
-
-    &__info {
-        padding: 0 15px;
-        text-align: center;
-        max-width: 100%;
-    }
-
-    &__heading {
-        @extend %overflow;
-        font-size: 16px;
-        color: $slider-title;
-        margin-bottom: 10px;
-    }
-
-    &__price {
-        display: block;
-        @extend %dmsans-700;
-        @extend %overflow;
-        color: $btn-color;
-    }
-}

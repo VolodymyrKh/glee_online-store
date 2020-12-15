@@ -1,25 +1,25 @@
 .lightning {
-    margin-bottom: 96px;
-
+    
     &__inner {
         display: flex;
         justify-content: space-between;
     }
+}
 
-    &__item {
-        max-width: 870px;
-        width: 100%;
-        padding: 86px 150px 86px 0;
-        background-color: #feefe2;
-        color: $slider-title;
-        position: relative;
+.lightning-card {
+    max-width: 870px;
+    width: 100%;
+    padding: 86px 150px 86px 0;
+    background-color: #feefe2;
+    color: $slider-title;
+    position: relative;
 
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
+    &:not(:last-child) {
+        margin-right: 30px;
     }
 
-    &__img-wrap {
+
+    &__img {
         position: absolute;
         max-width: 233px;
         width: 100%;
@@ -28,11 +28,11 @@
         justify-content: center;
         align-items: flex-end;
         transform: translate(57%, -45%);
-    }
 
-    &__img {
-        height: 100%;
-        object-fit: contain;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     &__content {
@@ -43,21 +43,21 @@
 
     &__heading {
         @extend %dmsans-700;
-        line-height: 1.4;
-        font-size: 26px;
         @extend %clamp;
         -webkit-line-clamp: 2;
-    }
-
-    &__text-wrap {
-        margin: 12px 0 30px;
+        line-height: 1.4;
+        font-size: 26px;
     }
 
     &__text {
-        @extend %rubik-400;
-        @extend %clamp;
-        -webkit-line-clamp: 3;
+        @extend %rubik-400;       
         line-height: 1.6;
+        margin: 12px 0 30px;
+
+        p {
+            @extend %clamp;
+            -webkit-line-clamp: 3;
+        }
     }
 
     &__btn {

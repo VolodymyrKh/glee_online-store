@@ -11,16 +11,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-    }
 
-    &__link-out {
-        width: 127px;
-        height: 127px;
-        border-radius: 50%;
-        background-color: rgba(163, 187, 200, 0.4);
-        @extend %center-flex;
-
-        &:hover {
+        &:hover .video__link-out {
             animation: shadow-blink 1.0s linear infinite;
         }
 
@@ -29,6 +21,15 @@
                 animation: fill-blink 1.0s linear infinite;
             }
         }
+
+    }
+
+    &__link-out {
+        width: 127px;
+        height: 127px;
+        border-radius: 50%;
+        background-color: rgba(163, 187, 200, 0.4);
+        @extend %center-flex;
     }
 
     &__link-in {
