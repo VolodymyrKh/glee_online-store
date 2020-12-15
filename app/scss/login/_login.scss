@@ -21,6 +21,7 @@
         width: 100%;
         font-size: 18px;
         outline: transparent;
+        transition: box-shadow 1s;
 
         &:hover {
             cursor: pointer;
@@ -72,6 +73,8 @@
     &__recovery {
         color: inherit;
         transition: color 0.5s;
+        max-width: 50%;
+        @extend %overflow;
 
         &:hover {
             color: $accent;
@@ -79,7 +82,10 @@
     }
 
     &__registration {
-        text-align: center;
+        // max-width: 80%;
+        @extend %overflow;
+    //    margin: 0 auto;
+    text-align: center;
         margin-bottom: 22px;
     }
 

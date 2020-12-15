@@ -1,41 +1,67 @@
 .lightning {
-    margin-bottom: 96px;
-
+    
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
-    }
-
-    &__item {
         display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        max-width: 870px;
-        padding: 90px 130px 86px 390px;
-        background-color: #feefe2;
-        color: $slider-title;
-        position: relative;
+        justify-content: space-between;
+    }
+}
+
+.lightning-card {
+    max-width: 870px;
+    width: 100%;
+    padding: 86px 150px 86px 0;
+    background-color: #feefe2;
+    color: $slider-title;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 30px;
     }
 
-    &__bg {
+
+    &__img {
         position: absolute;
-        top: -100px;
-        left: 140px;
+        max-width: 233px;
+        width: 100%;
+        height: 405px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transform: translate(57%, -45%);
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__content {
+        font-size: 16px;
+        max-width: 312px;
+        margin-left: auto;
     }
 
     &__heading {
         @extend %dmsans-700;
+        @extend %clamp;
+        -webkit-line-clamp: 2;
+        line-height: 1.4;
         font-size: 26px;
-        display: block;
     }
 
-    &__descr {
-        margin: 18px 0 30px;
-        @extend %rubik-400;
+    &__text {
+        @extend %rubik-400;       
+        line-height: 1.6;
+        margin: 12px 0 30px;
+
+        p {
+            @extend %clamp;
+            -webkit-line-clamp: 3;
+        }
     }
 
     &__btn {
+        display: inline-block;
         color: $menu-color;
         padding: 18px 86px 18px 28px;
         background-color: transparent;

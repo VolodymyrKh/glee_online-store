@@ -70,11 +70,13 @@
 
         <section class="terms">
             <div class="container">
+                <!-- тут і нижче, не впевнений на предмет h2, можливо h3..? -->
                 <h2 class="terms__title">Types of Personal Information We Collect</h2>
                 <div class="terms__list-wrapper">
                     <ol class="terms__list">
                         <li class="terms__item">
-                            <p class="terms__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            <!-- чи можна вважати контейнером для тексту li? -->
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 labore
                                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                                 laboris
@@ -83,7 +85,7 @@
                                 velit esse cillum dolore </p>
                         </li>
                         <li class="terms__item">
-                            <p class="terms__text">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 labore
                                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                                 laboris
@@ -92,17 +94,17 @@
                                 velit esse cillum dolore </p>
                         </li>
                         <li class="terms__item">
-                            <p class="terms__text">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 labore
                                 et dolore magna aliqua. </p>
                         </li>
                         <li class="terms__item">
-                            <p class="terms__text">Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            <p>Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                 ullamco
                                 laboris nisi ut aliquip ex ea commodo consequat. </p>
                         </li>
                         <li class="terms__item">
-                            <p class="terms__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod
                             </p>
                         </li>
@@ -110,16 +112,16 @@
                 </div>
 
                 <h2 class="terms__title">How marketpmss.com Collects Personal Infonnation</h2>
-                <div class="terms__collect">
-                    <p class="terms__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <div class="terms__text">
+                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore </p>
                 </div>
 
                 <h2 class="terms__title">How marketprosscom Uses Personal Information</h2>
-                <div class="terms__use">
-                    <p class="terms__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <div class="terms__text">
+                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore </p>
@@ -127,7 +129,7 @@
             </div>
         </section>
 
-        <seclion class="insights">
+        <section class="insights">
             <div class="container">
                 <div class="insights__heading">
                     <h2 class="title insights__title">Our Insights & Articles</h2>
@@ -140,83 +142,94 @@
                     </a>
                 </div>
 
-                <div class="insights__items">
-                    <article class="insights-card">
-                        <!-- оскільки немає ТЗ, то в цьому блоці я вирішив зробити посиланнями контентне зображення і текст. Можна також і інші елементи -->
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/1.jpg" alt="insight image">
+                <div class="insights__items container">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/1.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+
+
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Diusmod tempor incididunt ut labore et dolore magna
                                     aliqua. Ut
-                                    enim ad minim veniam</p>
+                                    enim ad minim veniam</h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <!-- різні іконки на елементах - різні класи -->
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
 
-                    <article class="insights-card">
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/2.jpg" alt="insight image">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/2.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore </p>
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore </h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
 
-                    <article class="insights-card">
-                        <a class="insights-card__link" href="#">
-                            <img class="insights-card__image" src="images/insights/3.jpg" alt="insight image">
+                    <article class="news-card">
+                        <a class="news-card__link" href="#">
+                            <img class="news-card__image" src="images/insights/3.jpg" alt="insight image">
                         </a>
-                        <div class="insights-card__wrapper">
-                            <div class="insights-card__news">news</div>
-                            <a class="insights-card__text-link" href="#">
-                                <p class="insights-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
+                        <div class="news-card__wrapper">
+                            <span class="news-card__label">news</span>
+                            <a class="news-card__text-link" href="#">
+                                <h3 class="news-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim
+                                </h3>
                             </a>
-                            <div class="insights-card__info">
-                                <span class="insights-card__date">28 january, 2020</span>
-                                <span class="insights-card__admin"> by admin</span>
+                            <div class="news-card__info">
+                                <span class="news-card__date">28 january, 2020</span>
+                                <span class="news-card__admin"> by admin</span>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
+
             <div class="partners">
                 <div class="container">
                     <ul class="partners__list">
                         <li class="partners__item">
-                            <img src="images/insights/partner-1.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-1.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-2.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-2.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-3.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-3.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-4.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-4.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                         <li class="partners__item">
-                            <img src="images/insights/partner-5.png" alt="partner's logo" class="partners_img">
+                            <img class="partners__image" src="images/insights/partner-5.png" alt="partner's logo"
+                                class="partners_img">
                         </li>
                     </ul>
                 </div>
             </div>
-        </seclion>
-
+        </section>
     </main>
 
     <footer class="footer">

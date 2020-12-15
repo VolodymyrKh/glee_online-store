@@ -24,16 +24,16 @@ body {
 
     &--out {
         max-width: 1800px;
-
     }
 }
 
 .title {
     @extend %dmsans-700;
-    display: block;
     font-size: 36px;
     color: $section-title;
     margin-bottom: 18px;
+    @extend %clamp;
+    -webkit-line-clamp: 2;
 }
 
 .filter {
@@ -47,8 +47,8 @@ body {
         @extend %dmsans-700;
         transition: color 0.3s;
 
-        &+& {
-            margin-left: 24px;
+        &:not(:last-child) {
+            margin-right: 23px;
         }
 
         &:hover,
@@ -56,6 +56,5 @@ body {
             cursor: pointer;
             color: $section-title;
         }
-    } 
+    }
 }
-

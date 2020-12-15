@@ -1,0 +1,21 @@
+.partners {
+    padding: 260px 0 90px;
+    background-color: $bg;
+    
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__image {
+        max-width: 167px;
+        max-height: 84px;
+    }
+
+    &--login {
+        margin-bottom: 60px;
+        padding-top: 75px;
+
+    }
+}

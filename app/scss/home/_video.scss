@@ -1,30 +1,42 @@
 .video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh*0.48);
     margin-bottom: 114px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 
     &__link {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 185px 0;
+        font-size: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        &:hover .video__link-out {
+            animation: shadow-blink 1.0s linear infinite;
+        }
+
+        &:hover {
+            path {
+                animation: fill-blink 1.0s linear infinite;
+            }
+        }
+
+    }
+
+    &__link-out {
         width: 127px;
         height: 127px;
-        font-size: 0;
-        position: relative;
+        border-radius: 50%;
+        background-color: rgba(163, 187, 200, 0.4);
+        @extend %center-flex;
+    }
 
-        &:before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: url(../../images/play.svg);
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
+    &__link-in {
+        width: 98px;
+        height: 98px;
+        border-radius: 50%;
+        background-color: $btn-color;
+        @extend %center-flex;
     }
 }

@@ -9,12 +9,12 @@ $(function () {
 
   var productMixer = mixitup(".week-product__list", {
     selectors: {
-      control: ".filter__btn--product",
+      control: ".week-product__btn",
     },
   });
   var desidnMixer = mixitup(".design__list", {
     selectors: {
-      control: ".filter__btn--design",
+      control: ".design__btn",
     },
   });
 });

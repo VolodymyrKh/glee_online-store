@@ -1,6 +1,6 @@
 $default: #262626;
 $menu-color: #436372;
-$accent: #fcd7b6;
+$accent: rgb(252, 215, 182);
 $btn-color:#a3bbc8;
 $btn-lightcolor: #edf1f4;
 $footer-text: #7b7b7b;
@@ -44,6 +44,24 @@ $filter-color: #8b8b8b;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+%center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @function max($numbers...) {
