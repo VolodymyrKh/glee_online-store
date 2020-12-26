@@ -27,7 +27,8 @@
     &__links {
         display: flex;
         justify-content: space-between;
-        width: 170px;
+        max-width: 170px;
+        width: 100%;
         position: absolute;
         top: 48%;
         left: 50%;

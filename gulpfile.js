@@ -1,11 +1,16 @@
+let preprocessor = "scss";
+
 const { src, dest, watch, parallel, series } = require("gulp");
 const scss = require("gulp-sass");
+const less = require("gulp-less");
 const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include");
+const svgsprite = require("gulp-svg-sprite");
 
 function browsersync() {
   browserSync.init({
@@ -16,9 +21,26 @@ function browsersync() {
   });
 }
 
+function htmlInclude() {
+  return src([
+    "app/html/home/index.html",
+    // "app/html/about/about.html",
+    // "app/html/login/login.html",
+    // "app/html/terms/terms.html",
+  ])
+    .pipe(
+      fileinclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("app/"))
+    .pipe(browserSync.stream());
+}
+
 function styles() {
-  return src("app/scss/style.scss")
-    .pipe(scss({ outputStyle: "compressed" }))
+  return src(`app/${preprocessor}/style.${preprocessor}`)
+    .pipe(eval(preprocessor)({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
@@ -45,18 +67,44 @@ function scripts() {
 }
 
 function images() {
-  return src("app/images/**/*.*")
+  return src([
+    "app/images/**/*.jpg",
+    "app/images/**/*.png",
+    "app/images/**/*.jpeg",
+    "app/images/sprite.svg",
+  ])
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
         imagemin.mozjpeg({ quality: 75, progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
+        // imagemin.svgo({
+        //   plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        // }),
+      ])
+    )
+    .pipe(dest("dist/images"));
+}
+
+function svgSprites() {
+  return src(["app/images/*.svg", "!app/images/sprite.svg"])
+    .pipe(
+      imagemin([
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(
+      svgsprite({
+        mode: {
+          stack: {
+            sprite: "../sprite.svg",
+          },
+        },
+      })
+    )
+    .pipe(dest("app/images/"));
 }
 
 function build() {
@@ -72,7 +120,9 @@ function cleanDist() {
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
-  watch(["app/**/*.html"]).on("change", browserSync.reload);
+  watch(["app/html/**/*.html"], htmlInclude);
+  // watch(["app/**/*.html"]).on("change", browserSync.reload);
+  watch(["app/images/*.svg", "!app/images/sprite.svg"], svgSprites);
 }
 
 exports.styles = styles;
@@ -81,6 +131,21 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(
+  cleanDist,
+  htmlInclude,
+  svgSprites,
+  images,
+  styles,
+  scripts,
+  build
+);
+exports.default = parallel(
+  htmlInclude,
+  styles,
+  svgSprites,
+  scripts,
+  browsersync,
+  watching
+);

@@ -1,0 +1,86 @@
+<section class="week-product">
+    <div class="container">
+        <div class="week-product__menu">
+            <h2 class="title">Products of the week</h2>
+
+            <div class="filter">
+                <button class="filter__btn week-product__btn" type="button" data-filter="all">All</button>
+                <button class="filter__btn week-product__btn" type="button"
+                    data-filter=".category-furnitures">Furnitures</button>
+                <button class="filter__btn week-product__btn" type="button"
+                    data-filter=".category-chairs">Chairs</button>
+                <button class="filter__btn week-product__btn" type="button"
+                    data-filter=".category-lighting">Lighting</button>
+                <button class="filter__btn week-product__btn" type="button" data-filter=".category-decor">Decor</button>
+            </div>
+        </div>
+
+        <div class="week-product__list">
+            <div class="week-product__wrapper mix category-furnitures">
+                @include('../../components/product-card.html', {
+                "title": "Wooden radio",
+                "price": "29.00",
+                "path": "images/product/1.png"
+                })
+            </div>
+            
+            <div class="week-product__wrapper mix category-chairs">
+                @include('../../components/product-card.html', {
+                "title": "Wooden chair",
+                "price": "29.00",
+                "path": "images/product/2.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-furnitures">
+                @include('../../components/product-card.html', {
+                "title": "White chair",
+                "price": "29.00",
+                "path": "images/product/3.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-chairs">
+                @include('../../components/product-card.html', {
+                "title": "Retro table",
+                "price": "29.00",
+                "path": "images/product/4.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-decor">
+                @include('../../components/product-card.html', {
+                "title": "Wooden radio",
+                "price": "29.00",
+                "path": "images/product/5.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-chairs">
+                @include('../../components/product-card.html', {
+                "title": "Wooden chair",
+                "price": "29.00",
+                "path": "images/product/6.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-lighting">
+                @include('../../components/product-card.html', {
+                "title": "White chair",
+                "price": "29.00",
+                "path": "images/product/7.png"
+                })
+            </div>
+
+            <div class="week-product__wrapper mix category-decor">
+                @include('../../components/product-card.html', {
+                "title": "Retro table",
+                "price": "29.00",
+                "path": "images/product/8.png"
+                })
+            </div>
+        </div>
+    </div>
+
+    @include('./lightning.html')
+</section>

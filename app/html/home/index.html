@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Glee Home</title>
+</head>
+<body>
+    @include('../components/header.html')
+
+    <main class="main">
+        @include('./main-slider.html')
+
+        @include('./info.html')
+
+        @include('./week-product/week-product.html')
+
+        @include('./design.html')
+
+        @include('./video.html')
+
+        @include('./insights.html')
+    </main>
+    @include('../components/footer.html')
+    
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

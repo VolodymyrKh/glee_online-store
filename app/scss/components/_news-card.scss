@@ -71,7 +71,7 @@
         left: 30px;
         bottom: 25px;
 
-        span {
+        span, time {
             display: block;
             max-width: 50%;
             @extend %overflow;
@@ -98,7 +98,7 @@
         }
     }
 
-    &__admin {
+    &__author {
         &::before {
             background-image: url(../images/insights/user.svg);
         }

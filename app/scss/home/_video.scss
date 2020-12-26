@@ -5,38 +5,40 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        padding: 185px 0;
+        padding: 235px 0;
         font-size: 0;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        position: relative;
 
-        &:hover .video__link-out {
-            animation: shadow-blink 1.0s linear infinite;
+        &:before {
+            content: "";
+            display: block;
+            width: 127px;
+            height: 127px;
+            border-radius: 50%;
+            background-image: url('../images/sprite.svg#play-decor');
+            position: absolute;
         }
 
         &:hover {
-            path {
-                animation: fill-blink 1.0s linear infinite;
+            &::before {
+                animation: shadow-blink 1.0s linear infinite;
             }
         }
 
+        &:hover {
+            .video__play {
+                animation: fill-blink 1.0s linear infinite;
+            }
+        }
     }
 
-    &__link-out {
-        width: 127px;
-        height: 127px;
-        border-radius: 50%;
-        background-color: rgba(163, 187, 200, 0.4);
-        @extend %center-flex;
-    }
-
-    &__link-in {
-        width: 98px;
-        height: 98px;
-        border-radius: 50%;
-        background-color: $btn-color;
-        @extend %center-flex;
+    &__play {
+        width: 22px;
+        height: 25px;
+        fill: #ffffff;
+        position: relative;
     }
 }

@@ -1,0 +1,60 @@
+<section class="design">
+    <div class="container"> 
+        <div class="design__menu">
+            <span class="title">New Design</span>
+
+            <div class="filter">
+                <button class="filter__btn design__btn" type="button" data-filter="all">All</button>
+                <button class="filter__btn design__btn" type="button"
+                    data-filter=".category-furnitures">Furnitures</button>
+                <button class="filter__btn design__btn" type="button" data-filter=".category-chairs">Chairs</button>
+                <button class="filter__btn design__btn" type="button" data-filter=".category-lighting">Lighting</button>
+                <button class="filter__btn design__btn" type="button" data-filter=".category-decor">Decor</button>
+            </div>
+        </div>
+
+        <div class="design__list">
+            @include('../components/design-card.html', {
+            "category": "category-furnitures",
+            "path": "images/design/1.jpg",
+            "title": "Beat Flat Pendant Black",
+            "type": "Classic"
+            })
+
+            @include('../components/design-card.html', {
+            "category": "category-chairs",
+            "path": "images/design/2.jpg",
+            "title": "Lampe Sur Pieds Bamboo",
+            "type": "Classic"
+            })
+
+            @include('../components/design-card.html', {
+            "category": "category-lighting",
+            "path": "images/design/3.jpg",
+            "title": "Rattan Rocking Chair",
+            "type": "Classic"
+            })
+
+            @include('../components/design-card.html', {
+            "category": "category-decor",
+            "path": "images/design/4.jpg",
+            "title": "Rattan Rocking Chair",
+            "type": "Classic"
+            })
+
+            @include('../components/design-card.html', {
+            "category": "category-furnitures",
+            "path": "images/design/5.jpg",
+            "title": "Rattan Rocking Chair",
+            "type": "Classic"
+            })
+
+            @include('../components/design-card.html', {
+            "category": "category-chairs",
+            "path": "images/design/6.jpg",
+            "title": "Lampe Sur Pieds Bamboo",
+            "type": "Classic"
+            })
+        </div>
+    </div>
+</section>
